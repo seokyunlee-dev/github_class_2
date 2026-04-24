@@ -1,0 +1,30 @@
+{
+  "name": "husky-lintstaged-eslint-prettier-example",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "eslint . --ext .js,.jsx",
+    "format": "prettier --write .",
+    "prepare": "husky install",
+    "test": "echo '테스트 통과!' && exit 0",
+    "build": "echo '빌드 성공!' && exit 0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.2.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "globals": "^17.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.3"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "**/*.{html,css,json,md}": [
+      "prettier --write"
+    ]
+  }
+}
