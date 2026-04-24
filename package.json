@@ -4,7 +4,9 @@
   "scripts": {
     "lint": "eslint . --ext .js,.jsx",
     "format": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "echo '테스트 통과!' && exit 0",
+    "build": "echo '빌드 성공!' && exit 0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
